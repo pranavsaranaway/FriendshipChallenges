@@ -1,25 +1,124 @@
-
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff3e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  min-width: 400px;
 }
+
+.container {
+  text-align: center;
+  width: 100%;
+  max-width: 280px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 10px;
+}
+
 h1 {
-    color: #bd0d0d;
+  color: #d35400;
+  margin-bottom: 10px;
+  font-size: 1.4em;
 }
+
 .challenge {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+  background-color: #ffe0b2;
+  border: 1px solid #ffab91;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin: 0 auto;
 }
-.inputFile{
-    display: none;
+
+.challenge p {
+  margin: 5px 0;
+  color: #e65100;
+  font-size: 0.85em;
 }
+
+.inputFile {
+  display: block;
+  margin: 8px auto;
+  padding: 4px;
+  border: 1px solid #ffab91;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #fff3e0;
+  color: #e65100;
+  font-size: 0.85em;
+}
+
+#uploadBtn {
+  background-color: #ff7043;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 0.85em;
+}
+
+#uploadBtn:hover {
+  background-color: #e64a19;
+}
+
+.fileText {
+  display: block;
+  margin-top: 5px;
+  color: #e65100;
+  font-size: 0.85em;
+}
+
 img {
-    display: block;
-    margin-top: 20px;
-    max-width: 100%;
+  display: block;
+  margin: 10px auto;
+  max-width: 100%;
+  border-radius: 10px;
+  border: 2px solid #ffab91;
+}
+
+.shared-images {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.shared-images h2 {
+  color: #d35400;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.images-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.images-container img {
+  width: 100px; /* Adjust the width as needed */
+  height: 100px; /* Adjust the height as needed */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+.images-container img {
+  transition: transform 0.3s ease;
+}
+
+.images-container img:hover {
+  transform: scale(1.2); /* Adjust the scale as needed */
 }
