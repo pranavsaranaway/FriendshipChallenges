@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friendship Challenges!</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Friendship Challenges!</h1>
+    <div class="challenge">
+        <p>Challenge of the day:</p>
+        <p><strong>Send a funny image of yourself!</strong></p>
+        <input 
+            type="file" 
+            class="inputFile" 
+            id="fileInp" 
+            accept="image/*"
+            onchange="getFile(event)"
+        />
+        <label for="fileInp">+</label>
+        <button onclick = "uploadImage()">UPLOAD IMAGE</button>
+        <span class="fileText"></span>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
