@@ -7,23 +7,30 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Friendship Challenges!</h1>
-    <div class="challenge">
-        <p>Challenge of the day:</p>
-        <p><strong>Send a funny image of yourself!</strong></p>
-        <input 
-            type="file" 
-            class="inputFile" 
-            id="fileInp" 
-            accept="image/*"
-            onchange="getFile(event)"
-        />
-        <label for="fileInp">+</label>
-        <button onclick = "uploadImage()">UPLOAD IMAGE</button>
-        <span class="fileText"></span>
+    <div class="container">
+        <img src="images/icon-128.png" alt="Friendship Challenges Icon" class="icon">
+        <h1>Friendship Challenges!</h1>
+        <div class="challenge">
+            <p>Challenge of the day:</p>
+            <p><strong>Send a funny image of yourself!</strong></p>
+            <input 
+                type="file" 
+                class="inputFile" 
+                id="fileInp" 
+                accept="image/*"
+                onchange="getFile(event)"
+            />
+            <button id="uploadBtn">UPLOAD IMAGE</button>
+            <span class="fileText"></span>
+        </div>
+        <div class="shared-images">
+            <h2>Check out what your friends are doing!! :</h2>
+            <div class="images-container">
+                <!-- Images will be dynamically added here -->
+            </div>
+        </div>
     </div>
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.48.1/dist/umd/supabase.min.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>
