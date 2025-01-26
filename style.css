@@ -1,124 +1,175 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #fff3e0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow: hidden;
-  min-width: 400px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff3e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    min-width: 400px;
 }
 
 .container {
-  text-align: center;
-  width: 100%;
-  max-width: 280px;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Adjusted max-width for larger view */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .icon {
-  width: 64px;
-  height: 64px;
-  margin-bottom: 10px;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 10px;
 }
 
 h1 {
-  color: #d35400;
-  margin-bottom: 10px;
-  font-size: 1.4em;
+    color: #d35400;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.selector-section {
+    margin-bottom: 20px;
+}
+
+.selector-section label {
+    margin-right: 10px;
+}
+
+.feeling-section, .challenge-section {
+    display: none; /* Hide both sections initially */
+}
+
+.feeling-section.active, .challenge-section.active {
+    display: block; /* Show the active section */
+}
+
+.feeling-section {
+    text-align: left;
+}
+
+.shared-images h3 {
+    color: #d35400;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.feeling-section textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ffab91;
+    border-radius: 5px;
+    resize: none;
+    font-size: 0.85em;
+    background-color: #fff3e0;
+    color: #e65100;
+}
+
+.feeling-section button {
+    background-color: #ff7043;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.85em;
+    color: white;
+    margin-top: 10px;
+}
+
+.feeling-section button:hover {
+    background-color: #e64a19;
+}
+
+.challenge-section {
+    text-align: left;
 }
 
 .challenge {
-  background-color: #ffe0b2;
-  border: 1px solid #ffab91;
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  margin: 0 auto;
+    background-color: #ffe0b2;
+    border: 1px solid #ffab91;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 0 auto;
 }
 
 .challenge p {
-  margin: 5px 0;
-  color: #e65100;
-  font-size: 0.85em;
+    margin: 5px 0;
+    color: #e65100;
+    font-size: 0.85em;
 }
 
 .inputFile {
-  display: block;
-  margin: 8px auto;
-  padding: 4px;
-  border: 1px solid #ffab91;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: #fff3e0;
-  color: #e65100;
-  font-size: 0.85em;
+    display: block;
+    margin: 8px auto;
+    padding: 4px;
+    border: 1px solid #ffab91;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #fff3e0;
+    color: #e65100;
+    font-size: 0.85em;
 }
 
 #uploadBtn {
-  background-color: #ff7043;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-size: 0.85em;
+    background-color: #ff7043;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.85em;
 }
 
 #uploadBtn:hover {
-  background-color: #e64a19;
+    background-color: #e64a19;
 }
 
 .fileText {
-  display: block;
-  margin-top: 5px;
-  color: #e65100;
-  font-size: 0.85em;
+    display: block;
+    margin-top: 5px;
+    color: #e65100;
+    font-size: 0.85em;
 }
 
 img {
-  display: block;
-  margin: 10px auto;
-  max-width: 100%;
-  border-radius: 10px;
-  border: 2px solid #ffab91;
-}
-
-.shared-images {
-  margin-top: 20px;
-  width: 100%;
-}
-
-.shared-images h2 {
-  color: #d35400;
-  font-size: 1.2em;
-  margin-bottom: 10px;
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+    border-radius: 10px;
+    border: 2px solid #ffab91;
 }
 
 .images-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    max-width: 330px; /* Adjust the max-width to fit three images per row */
+    margin: 0 auto; /* Center the container */
 }
 
 .images-container img {
-  width: 100px; /* Adjust the width as needed */
-  height: 100px; /* Adjust the height as needed */
-  object-fit: cover; /* Maintain aspect ratio and cover the container */
-  border-radius: 5px;
-  transition: transform 0.3s ease;
-}
-.images-container img {
-  transition: transform 0.3s ease;
+    width: 100px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    border-radius: 5px;
+    transition: transform 0.3s ease;
 }
 
 .images-container img:hover {
-  transform: scale(1.2); /* Adjust the scale as needed */
+    transform: scale(1.2); /* Adjust the scale as needed */
 }
