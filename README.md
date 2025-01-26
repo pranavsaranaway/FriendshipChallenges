@@ -24,3 +24,6 @@ I learned how chrome extensions are built from the ground up (and how they actua
 
 ## What's next for FriendshipChallenge!
 We will add a variety of prompts as well as an archive feature to allow users to look back on past memories
+
+## DEMO VIDEO!!
+https://youtu.be/4_c3t55yHWY
