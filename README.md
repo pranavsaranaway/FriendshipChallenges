@@ -9,6 +9,7 @@ Frontend:
 - HTML
 - CSS
 - Javascript
+  
 Backend:
 - supabase / supabase api
 
