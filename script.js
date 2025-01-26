@@ -53,6 +53,20 @@ document.getElementById('uploadBtn').addEventListener('click', async function() 
     } catch (error) {
         console.error('Error uploading file:', error.message);
     }
+    if ("Notification" in window) {
+        Notification.requestPermission().then(permission => {
+            if (permission === "granted") {
+                new Notification("Image Uploaded!", {
+                    body: "One of your friends has shared an image with you!",
+                    icon: "./images/icon-48.png"
+                });
+            }
+        });
+    } else {
+        console.error("Web Notifications API is not supported in this browser.");
+    }
+    
+    location.reload()
 });
 
 // Function to add an image to the gallery
