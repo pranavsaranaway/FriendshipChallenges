@@ -1,9 +1,6 @@
 {
   "manifest_version": 3,
   "name": "Friendship Challenges!",
-  "permissions": [
-    "notifications"
-  ],  
   "description": "An extension that allows you to connect with your friends through engaging prompts and challenges!",
   "version": "1.0",
   "icons": {
@@ -12,7 +9,12 @@
     "48": "images/icon-48.png",
     "128": "images/icon-128.png"
   },
-  
+  "permissions": [
+    "notifications"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
   "action": {
     "default_popup": "index.html",
     "default_title": "Friendship Challenges!",
